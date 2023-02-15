@@ -7,27 +7,28 @@
     font-family: 'Caveat', cursive;
 }
 
-html {
-    background-image: url(../assets/fonditopa.jpg);
-    width: 100vw;
-}
-
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    background-image: url(../assets/fonditopa.jpg);
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+} 
 
 /* Estilos Index */
 
 header {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    width: 100%;
     background-color: rgba(9, 9, 9, 0.539);
-    padding: 20px;
+    padding: 10px;
 }
 
 h1 {
@@ -61,15 +62,16 @@ nav .menu-bar li a {
 main {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .caja-izquierda {
+    min-height: 100vh;
     display: flex;
-    height: 500px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .caja-izquierda p {
@@ -84,9 +86,8 @@ main {
 
 .caja-derecha {
     display: flex;
-    height: 500px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .caja-derecha p {
@@ -99,16 +100,14 @@ main {
 
 }
 
-main {-webkit-animation:rotate-center .6s ease-in-out both;animation:rotate-center .6s ease-in-out both}
-
-@-webkit-keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
-
 footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.626);
-    margin-top: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 footer div p {
@@ -123,17 +122,18 @@ footer div a img {
 
 /* Estilos Acerca de RDM */
 
-.main-rdm {
+.acerca-rdm {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%
+    justify-content: center;
+    width: 50%
 
 }
 
 h3 {
-    margin-top: 25px;
+    margin-top: auto;
     font-size: 60px;
     color: white;
     background-color: rgba(9, 9, 9, 0.350);
@@ -146,6 +146,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 
 }
 
@@ -160,15 +161,101 @@ h3 {
 
 /* Estilos Contacto */
 
+.contenedor-contacto {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 h2 {
-    background-color: rgba(127, 255, 212, 0.441);
+    background-color: rgba(9, 9, 9, 0.530);
+    color: white;
+    border-radius: 20%;
+    padding: 10px;
     text-align: center;
     padding: 20px;
     margin: 20px;
 }
 
 .infoContacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: 40px;
 }
 
+.infoContacto label input {
+    margin: 10px;
+}
+
+.infoContacto label textarea {
+    margin: 20px;
+}
+
+.boton-contacto {
+    display: flex;
+    flex-direction: row;
+}
+
+.boton-contacto input {
+        margin: 15px;
+}
+
+.boton {
+    width: 80px;
+    border-radius: 5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Estilos Galería */
+
+.main-galeria{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+}
+
+.galeria-fotos {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+
+    width: 80%;
+}
+
+h4 {
+    font-size: 35px;
+    font-weight: bold;
+    background-color: rgba(9, 9, 9, 0.350);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+.box {
+    margin: 10px;
+}
+
+.box img {
+    border-radius: 15px;
+}
+
+.otro-boton .b-galeria{
+    width: auto;
+    font-size: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgba(9, 9, 9, 0.605);
+    color: white;
+
+}
 
