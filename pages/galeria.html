@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="shortcut icon" href="../assets/favipage.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -21,19 +22,59 @@
             </ul>
         </nav>
     </header>
-    <main class="main-galeria">
-        <h4>GALERIA</h4>
-        <section class="galeria-fotos">
-            <div class="box imagen-1"><img src="../assets/Bahamas (1).jpg" alt="Bahamas"></div>
-            <div class="box imagen-2"><img src="../assets/dubrovnik (1).jpg" alt=""></div>
-            <div class="box imagen-3"><img src="../assets/liechtenstein (1).jpg" alt=""></div>
-            <div class="box imagen-4"><img src="../assets/tailandia (1).jpg" alt=""></div>
-            <div class="box imagen-5"><img src="../assets/luxemburgo (1).jpg" alt=""></div>
-            <div class="box imagen-6"><img src="../assets/joshua-earle - 87JyMb9ZfU-unsplash (1).jpg" alt=""></div>
-        </section>
-        <div class="otro-boton">
-            <input class="b-galeria" type="button" value="Explorar">
+    <main>
+        <section>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <!-- <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button> 
+            Acá intenté generar otro botón ya que venía con 3 predeterminados para que vaya de la tercera imagen a la cuarta pero se rompe. También le había agregado uno de la 4 a la primera para que de la vuelta, pero no hubo caso. No encontré solución, tal vez sea la configuración del script que viene con el carrusel.
+            -->
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="../assets/dubredi.jpg" class="d-block w-100" alt="Dubrovnik">
+                <div class="carousel-caption d-none d-md-block">
+                <p>Ciudad costera de Dubrovnik ubicada en Croacia</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="../assets/bahamasredi.jpg" class="d-block w-100" alt="Bahamas">
+                <div class="carousel-caption d-none d-md-block">
+                <p>Playa de Coco Bay en las Bahamas</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/budaredi.jpg" class="d-block w-100" alt="Tailandia">
+                <div class="carousel-caption d-none d-md-block">
+                <p>Gran Buda Phuket en la ciudad de Karon</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../assets/luxemburgoredi.jpg" class="d-block w-100" alt="Luxemburgo">
+                <div class="carousel-caption d-none d-md-block">
+                <p>Ciudad de Luxemburgo</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/luxemburgoredi.jpg" class="d-block w-100" alt="Luxemburgo">
+                    <div class="carousel-caption d-none d-md-block">
+                    <p>Ciudad de Luxemburgo</p>
+                    </div>   
+            </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
         </div>
+    </section>
     </main>
     <footer>
         <div>
@@ -45,5 +86,7 @@
             <a href=""><img src="../assets/fredes.png" alt="Facebook"></a>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

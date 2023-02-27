@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Caveat', cursive;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 body {
     background-image: url(../assets/fonditopa.jpg);
-    height: 100vh;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,18 +16,21 @@ body {
     background-attachment: fixed;
 } 
 
-/* Estilos Index */
+/* Estilos Header - Nav Index */
 
 header {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    position: fixed;
+    /* position: fixed; */ 
     width: 100%;
-    background-color: rgba(9, 9, 9, 0.539);
-    padding: 10px;
+    background-color: rgb(9, 9, 9);
+    padding: 5px;
+}
+
+.main-index {
+    min-height: 100vh;
 }
 
 h1 {
@@ -39,7 +41,7 @@ h1 {
 .menu-bar {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -48,34 +50,36 @@ nav .menu-bar li a {
     text-decoration: none;
     color: white;
     font-size: 30px;
-    padding: 15px;
 }
 
 .menu-bar li {
     list-style-type: none;
+    padding: 15px;
 }
 
-.menu-bar {-webkit-animation:tracking-in-contract-bck 2.5s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-contract-bck 2.5s cubic-bezier(.215,.61,.355,1.000) both}
+/* Estilos Main Index */ 
 
-@-webkit-keyframes tracking-in-contract-bck{0%{letter-spacing:1em;-webkit-transform:translateZ(400px);transform:translateZ(400px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes tracking-in-contract-bck{0%{letter-spacing:1em;-webkit-transform:translateZ(400px);transform:translateZ(400px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
-
-main {
+.index-box {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    margin: 20px;
+    height: 500px;
+}
+
+section div {
+    padding: 20px;
 }
 
 .caja-izquierda {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .caja-izquierda p {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
     background-color: rgba(9, 9, 9, 0.350);
     color: white;
@@ -91,27 +95,27 @@ main {
 }
 
 .caja-derecha p {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: bold;
     background-color: rgba(9, 9, 9, 0.350);
     color: white;
     padding: 30px;
     border-radius: 35px;
-
 }
 
 footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.626);
+    background-color: rgb(0, 0, 0);
     width: 100%;
+    margin-top: auto;
     position: fixed;
     bottom: 0;
 }
 
 footer div p {
-    font-size: 25px;
+    font-size: 15px;
     font-weight: bold;
     color: white;
 }
@@ -123,18 +127,15 @@ footer div a img {
 /* Estilos Acerca de RDM */
 
 .acerca-rdm {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 50%
-
+    align-items: center;
+    min-height: 100vh;
 }
 
 h3 {
-    margin-top: auto;
-    font-size: 60px;
+    font-size: 30px;
     color: white;
     background-color: rgba(9, 9, 9, 0.350);
     padding: 15px;
@@ -142,31 +143,31 @@ h3 {
 }
 
 .box-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
+    width: 60%;
+}
 
+.box-1 p {
+    margin-bottom: 30px;
+    background-color: rgba(9, 9, 9, 0.350);
 }
 
 .texto-acerca {
     color: white;
-    background-color: rgba(9, 9, 9, 0.350);
+    padding: 20px;
     border-radius: 40px;
+    line-height: 25px;
     text-align: center;
     font-size: 20px;
-    margin: 50px;
 }
 
 /* Estilos Contacto */
 
 .contenedor-contacto {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 h2 {
@@ -195,6 +196,11 @@ h2 {
     margin: 20px;
 }
 
+.infoContacto {
+    color: white;
+    background-color: rgba(9, 9, 9, 0.530);
+}
+
 .boton-contacto {
     display: flex;
     flex-direction: row;
@@ -211,51 +217,242 @@ h2 {
     font-weight: bold;
 }
 
-/* Estilos Galería */
+/* Estilos Explorar */
 
-.main-galeria{
-    min-height: 100vh;
+.tarjetas {
+    padding: 60px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;;
+    gap: 30px;
 }
 
-.galeria-fotos {
-    display: grid;
-    gap: 15px;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    justify-content: center;
-
-    width: 80%;
-}
-
-h4 {
-    font-size: 35px;
-    font-weight: bold;
+.tarjeta {
     background-color: rgba(9, 9, 9, 0.350);
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.tarjeta-imagen {
+    max-width: 100%;
+}
+
+.tarjeta-texto {
     color: white;
-    padding: 20px;
-    border-radius: 20px;
-
 }
 
-.box {
-    margin: 10px;
+/* Estilos Galería - Carousel con Bootstrap*/
+
+.carousel-item img {
+width: 500px;
+height: 800px;
+object-fit: cover;
+border-radius: 20%;
 }
 
-.box img {
-    border-radius: 15px;
-}
-
-.otro-boton .b-galeria{
-    width: auto;
-    font-size: 30px;
-    border-radius: 5px;
+.carousel-caption p{
     font-weight: bold;
-    background-color: rgba(9, 9, 9, 0.605);
+    font-size: 20px;
     color: white;
+    background-color: rgb(9, 9, 9);
+}
 
+/* En la galería me quedé muy raro el H1 pero no encontré manera de volverle a asignar el color y la fuente que le había dado arriba */
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    nav .menu-bar li a {
+        font-size: 25px;
+    }
+
+    .caja-izquierda p {
+        font-size: 18px;
+        padding: 18px;
+        border-radius: 25px;
+        text-align: center;
+    }
+
+    .caja-derecha p {
+        font-size: 18px;
+        padding: 18px;
+        border-radius: 25px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 30px;
+    }
+
+    .texto-acerca {
+        line-height: 20px;
+        font-size: 15px;
+    }
+
+    .carousel-caption p{
+        font-size: 15px;
+    }
+
+    h2 {
+        padding: 15px;
+        margin: 15px;
+        font-size: 20px;
+    }
+
+    .infoContacto {
+        font-size: 20px;
+    }
+
+    .infoContacto label textarea {
+        width: 400px
+    }
+
+    .boton {
+        border-radius: 5%;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    nav .menu-bar li a {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+        padding: 15px;
+        border-radius: 30px;
+    }
+
+    .texto-acerca {
+        line-height: 15px;
+        font-size: 15px;
+    }
+
+    .carousel-item img {
+        width: 380px;
+        height: 550px;
+        object-fit: cover;
+        border-radius: 20%;
+        }
+
+/*     .carousel-caption p{
+        font-size: 10px;
+    } Acá no pude encontrarle la vuelta para poder achicar el texto p del slide que dice a qué lugar pertenece la imagen*/
+
+    h2 {
+        padding: 15px;
+        margin: 15px;
+        font-size: 15px;
+    }
+
+    .infoContacto {
+        font-size: 15px;
+    }
+
+    .infoContacto label textarea {
+        width: 250px
+    }
+
+    .boton {
+        border-radius: 5%;
+        font-size: 10px;
+    }
+
+    footer div p {
+        font-size: 10px;
+    }
+    
+    footer div a img {
+        padding: 5px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    h1 {
+        font-size: 25px;
+    }
+
+    nav .menu-bar li a {
+        font-size: 15px;
+    }
+
+    .caja-izquierda p {
+        text-align: center;
+    }
+
+    .caja-derecha p {
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .box-1 {
+        width: 80%;
+    }
+
+    .texto-acerca {
+        line-height: 15px;
+        font-size: 14px;
+    }
+
+    .tarjeta-texto {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .carousel-item img {
+        width: 280px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 20%;
+        }
+
+    h2 {
+        padding: 10px;
+        margin: 10px;
+        font-size: 10px;
+    }
+
+    .infoContacto {
+        font-size: 10px;
+    }
+
+    .infoContacto label textarea {
+        width: 200px
+    }
+
+    .boton {
+        border-radius: 5%;
+        font-size: 10px;
+    }
+
+    footer div p {
+        font-size: 10px;
+    }
+    
+    footer div a img {
+        padding: 5px;
+        width: 30px;
+    }
 }
 
