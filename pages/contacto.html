@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto RDM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="shortcut icon" href="../assets/favipage.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <h1>Resto del Mundo</h1>
-        <nav>
+        <button class="abrir-desplegable" id="abrir"><i class="bi bi-list"></i></button>
+        <nav class="nav visible" id="nav">
+            <button class="cerrar-desplegable" id="cerrar"><i class="bi bi-x"></i></button>
             <ul class="menu-bar">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./acercaderdm.html">Acerca de RDM</a></li>
@@ -29,7 +32,7 @@
             <div class="infoContacto">
                 <label class="letra-contacto" for="Nombre">Nombre:<input type="Nombre" id="Nombre"></label>
                 <label class="letra-contacto" for="E-Mail">E-Mail:<input type="email" name="E-Mail" id="E-Mail"></label>
-                <label for="Comentario"><textarea name="Comentario" id="Comentario" cols="100" rows="10"></textarea></label>
+                <label for="Comentario"><textarea class="text-area" name="Comentario" id="Comentario" cols="100" rows="10"></textarea></label>
             </div>
             <div class="boton-contacto">
                 <input class="boton" type="submit" value="Enviar">
@@ -48,5 +51,7 @@
             <a href=""><img src="../assets/fredes.png" alt="Facebook"></a>
         </div>
     </footer>
+
+    <script src="../main.js"></script>
 </body>
 </html>
