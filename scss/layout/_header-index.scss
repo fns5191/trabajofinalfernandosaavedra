@@ -1,0 +1,41 @@
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	background-color: $background-color_1;
+	padding: 5px;
+}
+h1 {
+	color: $color_1;
+	font-size: 50px;
+}
+.menu-bar {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	li {
+		list-style-type: none;
+		padding: 15px;
+	}
+}
+nav {
+	.menu-bar {
+		li {
+			a {
+				text-decoration: none;
+				color: $color_1;
+				font-size: 30px;
+			}
+		}
+	}
+}
+.abrir-desplegable {
+	display: none;
+}
+.cerrar-desplegable {
+	display: none;
+}
